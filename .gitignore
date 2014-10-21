@@ -1,0 +1,6 @@
+cache/*
+administrator/cache/*
+phpinfo.php
+configuration.php
+tmp/*
+modules/mod_improved_ajax_login/cache/*

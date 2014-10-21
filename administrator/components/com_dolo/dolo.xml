@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_dolo</name>
+    <creationDate>2014-10-08</creationDate>
+    <copyright></copyright>
+    <license></license>
+    <author></author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>dolo.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-GB">language/en-GB/en-GB.com_dolo.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_dolo/assets/images/s_com_dolo.png" >COM_DOLO</menu>
+        <submenu>
+            
+			<menu link="option=com_dolo&amp;view=campaigns" view="campaigns" img="components/com_dolo/assets/images/s_campaigns.png" alt="Dolo/Campaigns">COM_DOLO_TITLE_CAMPAIGNS</menu>
+
+			<menu link="option=com_dolo&amp;view=brands" view="brands" img="components/com_dolo/assets/images/s_brands.png" alt="Dolo/Brands">COM_DOLO_TITLE_BRANDS</menu>
+
+			<menu link="option=com_dolo&amp;view=campaigntypes" view="campaigntypes" img="components/com_dolo/assets/images/s_campaigntypes.png" alt="Dolo/Campaigntypes">COM_DOLO_TITLE_CAMPAIGNTYPES</menu>
+
+			<menu link="option=com_dolo&amp;view=campaignstatuss" view="campaignstatuss" img="components/com_dolo/assets/images/s_campaignstatuss.png" alt="Dolo/Campaignstatuss">COM_DOLO_TITLE_CAMPAIGNSTATUSS</menu>
+
+			<menu link="option=com_dolo&amp;view=accounts" view="accounts" img="components/com_dolo/assets/images/s_accounts.png" alt="Dolo/Accounts">COM_DOLO_TITLE_ACCOUNTS</menu>
+
+			<menu link="option=com_dolo&amp;view=accountbrandmappings" view="accountbrandmappings" img="components/com_dolo/assets/images/s_accountbrandmappings.png" alt="Dolo/Accountbrandmappings">COM_DOLO_TITLE_ACCOUNTBRANDMAPPINGS</menu>
+
+			<menu link="option=com_dolo&amp;view=accountusermappings" view="accountusermappings" img="components/com_dolo/assets/images/s_accountusermappings.png" alt="Dolo/Accountusermappings">COM_DOLO_TITLE_ACCOUNTUSERMAPPINGS</menu>
+
+			<menu link="option=com_dolo&amp;view=userbrandmappings" view="userbrandmappings" img="components/com_dolo/assets/images/s_userbrandmappings.png" alt="Dolo/Userbrandmappings">COM_DOLO_TITLE_USERBRANDMAPPINGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>dolo.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB/en-GB.com_dolo.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_dolo.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="dolo"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

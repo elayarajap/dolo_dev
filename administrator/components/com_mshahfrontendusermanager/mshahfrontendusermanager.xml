@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>MshahFrontendUserManager</name>
+
+    <creationDate>Jan 2014</creationDate>
+    <author>Mshah Info Technologies pvt ltd</author>
+    <authorEmail>info@mshahtech.com</authorEmail>
+    <authorUrl>http://mshahtech.com</authorUrl>
+    <copyright>2014 mshahtech.com - All rights reserved</copyright>
+    <license>GNU/GPL - http://www.gnu.org/copyleft/gpl.html</license>
+    <version>1.0.0</version>
+    <description>mshahfrontendusermanager Component for Joomla! 3.x</description>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+   
+
+    <media destination="com_mshahfrontendusermanager" folder="media">
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>index.html</filename>
+    </media>
+
+    <files folder="components/com_mshahfrontendusermanager">
+        <filename>mshahfrontendusermanager.php</filename>
+        <filename>index.html</filename>
+        <filename>controller.php</filename>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+
+    </files>
+    
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.com_mshahfrontendusermanager.ini</language>
+    </languages>
+
+
+    <administration>
+    <files folder="administrator/components/com_mshahfrontendusermanager">
+        <filename>mshahfrontendusermanager.php</filename>
+        <filename>index.html</filename>
+        <filename>controller.php</filename>
+        <folder>sql</folder>
+        <folder>views</folder>
+	
+    </files>
+    <languages folder="administrator/language/en-GB">
+        
+        <language tag="en-GB">en-GB.com_mshahfrontendusermanager.ini</language>
+		<language tag="en-GB">en-GB.com_mshahfrontendusermanager.sys.ini</language>
+    </languages>
+
+         <menu link="option=com_mshahfrontendusermanager" img="../media/com_mshahfrontendusermanager/images/mshah_usermanagement.png">COM_mshahfrontendusermanager_MENU</menu> 
+
+    </administration> 
+
+</extension>

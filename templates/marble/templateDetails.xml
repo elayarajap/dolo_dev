@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="template" client="site">
+        <name>Marble</name>
+        <creationDate>May 2014</creationDate>
+        <author>CTHthemes</author>
+        <authorEmail>contact@cththemes.com</authorEmail>
+        <authorUrl>CTHthemes.com</authorUrl>
+        <copyright>Copyright Info  CTHthemes.com</copyright>
+        <license>License Info  CTHthemes.com</license>
+        <version>1.0.0</version>
+        <description>TPL_MARBLE_XML_DESC</description>
+        <files>
+				<filename>component.php</filename>
+				<filename>error.php</filename>
+                <filename>index.html</filename>
+                <filename>index.php</filename>
+                <filename>template_preview.png</filename>
+                <filename>template_thumbnail.png</filename>
+                <filename>templateDetails.xml</filename>
+			<folder>html</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>css</folder>
+			<folder>less</folder>
+        </files>
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.tpl_marble.ini</language>
+			<language tag="en-GB">en-GB/en-GB.tpl_marble.sys.ini</language>
+		</languages>
+        <positions>
+            <position>rev-slider</position>
+			<position>static-menu</position>
+            <position>home-banner</position>
+            <position>left-sidebar</position>
+            <position>right-sidebar</position>
+            <position>position-1</position>
+            <position>position-2</position>
+            <position>position-3</position>
+            <position>position-4</position>
+            <position>position-5</position>
+            <position>position-6</position>
+            <position>position-7</position>
+            <position>position-8</position>
+            <position>position-9</position>
+            <position>skills-accord</position>
+            <position>shortcodes</position>
+            <position>contact</position>
+            <position>home-clients</position>
+            <position>social-icons</position>
+            <position>up-footer</position>
+            <position>footer-line</position>
+            <position>twitter</position>
+            <position>debug</position>
+        </positions>
+        
+         <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="favicon" type="media" label="TPL_MARBLE_FAVICON_LABEL"
+                    description="TPL_MARBLE_FAVICON_DESC" directory=""/>
+                <field name="logoImage" type="media" label="Logo Image"
+                    description="Logo Image" directory=""/>
+                <field name="logoText" type="text" label="Logo Text"
+                    description="Logo Text" default="Marble"/>
+                <field name="fontDefault" type="text" label="Font Default"
+                    description="Font Default" default="Raleway"/>
+                <field name="preMadeSkin" type="list" label="Pre Made Skin Color"
+                    description="Pre Made Skin Color" default="marble">
+                    <option value="marble">Marble ( default)</option>
+                    <option value="medicine">Medicine</option>
+                    <option value="coffee">Coffee</option>
+                </field>
+                <field name="overrideColor" type="radio" label="Override Color" class="btn-group btn-group-yesno"
+                    description="Override Color" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colorSkin" type="color" default="#e74c3c" 
+                    label="Default Color Skin"
+                    description="Default Color Skin"/>
+                <field name="colorSkin2" type="color" default="#9e2114" 
+                    label="Default Color Skin 2"
+                    description="Default Color Skin 2"/>
+                <field name="headingTextColor" type="color" default="#3a3d41" 
+                    label="Background Grey - Heading Text Color"
+                    description="Background Grey - Heading Text Color"/>
+                <field name="textColor1" type="color" default="#dddddd" 
+                    label="Text Color 1"
+                    description="Text Color 1"/>
+                <field name="textColor2" type="color" default="#999999" 
+                    label="Text Color 2"
+                    description="Text Color 2"/>
+                <field name="whiteColor" type="color" default="#ffffff" 
+                    label="White Color"
+                    description="White Color"/>
+                <field name="blackColor" type="color" default="#000000" 
+                    label="Black Color"
+                    description="Black Color"/>
+                <field name="error" type="menuitem" published="1"
+                    label="Error Page Menu"
+                    description="The Menu page to redirect to if request page is not found"/>
+
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

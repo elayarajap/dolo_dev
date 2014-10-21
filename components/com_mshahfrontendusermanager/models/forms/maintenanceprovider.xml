@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="maintenanceprovider">
+        <fieldset name="maintenanceprovider">
+ 
+        
+        <field
+            name="id"
+            type="hidden"           
+            size="28"
+            label="id"           
+            required="true">                
+        </field>
+
+          <field
+            name="password1"
+            type="hidden"           
+            size="28"
+            label="password"           
+            required="true">                
+        </field>
+
+         <field
+            name="groupid"
+            type="hidden"           
+            size="28"
+            label="groupid"           
+            required="true">                
+        </field>
+         <field
+            name="group"
+            type="text"           
+            size="28"
+            label="Group"
+            readonly="true">                
+        </field>
+
+
+        <field
+            name="name"
+            type="text"           
+            size="28"
+            label="COM_MSHAHFRONTENDUSERMANAGER_NAME_LABEL"           
+            required="true">                
+        </field>
+ 
+        <field
+            name="username"
+            type="text"
+            label="COM_MSHAHFRONTENDUSERMANAGER_USER_USER_NAME_LABEL"
+            required="true"
+            size="28" />
+
+       <field name="password"
+        type="password" 
+        required="true" 
+        label="COM_MSHAHFRONTENDUSERMANAGER_USER_PASSWORD_LABEL" 
+        description="" 
+        size="28" />
+
+        <field
+            name="confirmpassword"
+            type="text"           
+            size="28"
+            label="COM_MSHAHFRONTENDUSERMANAGER_USER_CONFIRM_PASSWORD_LABEL"           
+            required="true">                
+        </field>
+
+        <field
+            name="usergroup"
+            type="sql"
+            multiple="false"
+            size="1"
+            query="select id, title from #__usergroups"
+            key_field="id"
+            value_field="title"
+            required="true"
+            >
+                <option value="">Please select user group</option>
+        </field>
+
+
+ 
+        <field
+            name="email"
+            type="text"
+            label="COM_MSHAHFRONTENDUSERMANAGER_USER_EMAIL_LABEL"
+            class="required validate-email"
+            required="true"
+            size="28" />
+
+        <field name="block"
+            type="radio"
+            label="COM_MSHAHFRONTENDUSERMANAGER_USER_STATUS_LABEL"
+            required="true"
+            default="0">
+            <option value="0">Active</option>
+            <option value="1">Non-Active</option>
+        </field>
+         
+        </fieldset>
+</form>

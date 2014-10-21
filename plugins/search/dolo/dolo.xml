@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_dolo</name>
+    <author></author>
+    <creationDate>2014-10-08</creationDate>
+    <copyright></copyright>
+    <license></license>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SEARCH_COM_DOLO_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="dolo">dolo.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        
+			<language tag="en-GB">language/en-GB.plg_search_dolo.ini</language>
+			<language tag="en-GB">language/en-GB.plg_search_dolo.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_DOLO_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_DOLO_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

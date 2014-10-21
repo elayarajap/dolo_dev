@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fields name="params" >
+                <fieldset name="page_style">
+                        <field name="pageType"
+                               type="list"
+                               default="multiPage"
+                               label="Menu Page Type"
+                               description="Menu Page Type">
+                                <option value="multiPage">Multi Page</option>
+                                <option value="onePage">One Page</option>
+                        </field>
+                </fieldset>
+        </fields>
+
+</form>

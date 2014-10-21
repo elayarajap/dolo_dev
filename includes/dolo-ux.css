@@ -1,0 +1,349 @@
+html, body {
+	width:100%; height:100%;
+	margin:0; padding:0;
+	font-size:12px;
+	line-height:16px;
+	font-family:"Open Sans", Arial, Helvetica, sans serif;
+	background:#f2f2f2 url('../images/bg_gradient.png') repeat-x 0 0;
+}
+
+div#wrapper-page {
+	position:relative;
+	width:100%; height:100%;
+	margin:0;
+	padding:0;
+	background:url('../images/bg_webpage-top.png') no-repeat top center;
+}
+div#wrapper-contents {
+	width:926px; height:3505px;
+	margin:0 auto;
+	background:url('../images/bg_webpage.png') no-repeat 0 0;
+	position:relative;
+}
+div#article-section {
+	width:910px; height:1297px;
+	background:rgba(255,255,255,1);
+	position:absolute;
+	top:1273px; left:-120px;
+}
+
+div#article-section p.copy-text {
+	color: #373737;
+    font-family: 'lucida grande',sans-serif !important;
+    font-size: 16px;
+    line-height: 25px;
+    padding-top: 25px;
+	margin-right:10px;
+}
+div#article-section p img.copy-floater {
+	width:320px; height:600px;
+	float:right;
+	margin:-20px -10px 0 0;
+}
+div.wrapper-awesome { 
+	position:relative;
+	/*width:690px; height:440px;*/
+	/*width:950px; height:515px;*/
+}
+div.wrapper-awesome img { 
+	/*position:absolute;
+	top:0; left:0;*/
+	/*width:100%; height:100%;*/
+}
+div.awesome-image-rollover {
+	width:100%; height:100%;
+	position:absolute;
+	top:0; left:0;
+}
+div.tray-closer-top, div.tray-closer-btm, div.tray-closer-left, div.tray-closer-right {
+	position:absolute;
+	background:transparent;
+}
+div.tray-closer-top, div.tray-closer-btm {
+	height:20px;
+	left:-10px;
+}
+div.tray-closer-left, div.tray-closer-right {
+	width:20px;
+	top:0;
+}
+div.tray-closer-top {
+	top:-20px;
+}
+div.tray-closer-btm {
+	bottom:-20px;
+}
+div.tray-closer-left {
+	left:-25px;
+}
+div.tray-closer-right {
+	right:-25px;
+}
+div.awesome-tray {
+	position:absolute;
+	width:100%; height:110px;
+	left:0; top:20px;
+	display:block;
+}
+div.awesome-tray-wrapper {
+	position:absolute;
+	width:100%; height:110px;
+	left:0; bottom:0;
+	display:none;
+	overflow:hidden;
+}
+div.tray-contents {
+	width:225px; height:100%;
+	position:absolute;
+	overflow:hidden;
+	background:rgba(255,255,255,.5);
+	color:#000;
+	/*border:1px solid green;*/
+}
+div.tray-contents p {
+	/*font-size:10px;
+	font-weight:bold;
+	line-height:12px;
+	cursor:pointer; cursor:hand;*/
+}
+div.tray-contents img {
+	/* width:100%; height:auto; */
+}
+div.tray-contents img.awesome-thumb {
+	width:auto; 
+	margin:0;
+	/*max-height:110px;*/
+}
+table.tray-slider-left, table.tray-slider-right {
+	width:auto; height:100%;
+	background:rgba(0,0,0,.75);
+	font-size:20px;
+	font-weight:bold;
+	color:#fff;
+	position:absolute;
+	line-height:100%;
+	top:0;
+	cursor:pointer; cursor:hand;
+	display:none;
+}
+table.tray-slider-left {
+	left:0;
+}
+table.tray-slider-right {
+	right:0;
+}
+table.awesome-tn-video, table.awesome-tn-modal, table.awesome-tn-link  {
+	text-align:center;
+	margin:0;
+	cursor:pointer; cursor:hand;
+}
+table.awesome-tn-video {
+	width:90%; height:65%;
+	padding:5px 0;
+	overflow:hidden;
+	line-height:90%;
+	background:#000;
+}
+table.awesome-tn-video img {
+	width:100%;
+	margin:0 auto;
+}
+table.awesome-tn-modal  {
+	width:45%; height:90%;
+	overflow:hidden;
+	/*float:left;*/
+	position:absolute;
+	top:10px; left:0;
+	margin:0;
+}
+table.awesome-tn-modal tbody, table.awesome-tn-modal tbody tr, table.awesome-tn-modal tr, table.awesome-tn-modal tbody tr td, table.awesome-tn-modal tr td {
+	height:100%;
+}
+table.awesome-tn-modal tbody tr td div, table.awesome-tn-modal tr td div {
+	width:45%; height:100%;
+	min-width:105px; max-width:105px;
+	overflow:hidden;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:auto 66%;
+}
+/*table.awesome-tn-modal tbody tr td div img  {
+	height:100%;
+	display:block;
+	margin:0 auto;
+}*/
+table.awesome-tn-link  {
+	width:85%; height:80%;
+	overflow:hidden;
+	background:#fff;
+}
+table.awesome-tn-link tbody tr td, table.awesome-tn-link tr td {
+	padding:10px;
+}
+table.awesome-tn-link tr td img, table.awesome-tn-link tbody tr td img  {
+	max-width:75%; max-height:100%;
+	margin:0;
+}
+p.awesome-copy-video, table.awesome-copy-modal, p.awesome-copy-link  {
+	width:auto;
+	margin:0;
+	text-align:left;
+	font-size:10px;
+	font-weight:bold;
+	line-height:12px;
+	cursor:pointer; cursor:hand;
+	color:#fff;
+	border:1px solid green;
+	/*text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;*/
+}
+p.awesome-copy-video {
+	margin:6px auto;
+	text-align:center;
+}
+table.awesome-copy-modal  {
+	width:40%; height:90%;
+	margin:0;
+	text-align:left;
+	/*float:right;*/
+	position:absolute;
+	top:10px; right:0;
+	font-size:11px;
+	font-weight:bold;
+}
+p.awesome-copy-link  {
+	margin:6px auto 0;
+}
+
+
+div#awesome-modal {
+	width:100%; height:100%;
+	position:fixed;
+	top:0; left:0;
+	display:none;
+	background:rgba(0,0,0,.5);
+}
+div#video-content-framer {
+	margin:0 auto;
+	background:#000;
+	padding:20px 0 10px;
+	border-radius:20px;
+	position:relative;
+}
+div#video-content-framer p {
+	text-align:left;
+	font-size:14px;
+	line-height:18px;
+	color:#fff;
+	padding:0;
+	margin:4px 0 0 12px;
+}
+div#modal-content-framer {
+	margin:0 auto;
+	background:#fff;
+	padding:14px;
+	border-radius:10px;
+	position:relative;
+}
+div#modal-content-framer p {
+	text-align:center;
+	font-size:14px;
+	line-height:18px;
+}
+div#modal-content-framer img{
+	width:100%; height:auto;
+	cursor:pointer; cursor:hand;
+}
+div#modal-closer {
+	width:14px; height:14px;
+	position:absolute;
+	top:0; right:0;
+	border-top-right-radius:10px;
+	margin:0; padding:0;
+	font-size:12px;
+	line-height:16px;
+	font-weight:bold;
+	text-align:left;
+	color:#000;
+	cursor:pointer; cursor:hand;
+}
+div#video-closer {
+	width:180px; height:30px;
+	position:absolute;
+	top:-16px; right:-18px;
+	border-radius:16px;
+	color:#000;
+	cursor:pointer; cursor:hand;
+	background:#000;
+	padding:4px 0 0;
+}
+img.wie-arm-pump {
+	position:absolute;
+	top:2233px; left:289px;
+}
+
+div.dolo-tile {
+width:100%; height:100%;
+position:absolute; 
+top:0; left:0;
+	cursor:pointer; cursor:hand;
+}
+div.dolo-ad {
+width:100%; height:80%;
+position:absolute; 
+bottom:0; left:0;
+	cursor:pointer; cursor:hand;
+}
+div.tray-nav-dot {
+width:6px; height:6px;
+ border:2px solid white; 
+ border-radius:5px; 
+ display:inline-block; 
+ margin:0 4px; 
+ background-color:transparent;
+}
+div.tray-nav-dot-selected {
+ background-color:white;
+}
+div.awesome-tray-nav {
+width:100%; height:12px;
+position:absolute;
+top:0; left:0;
+}
+div.awesome-tray-nav  table {
+width:100%; height:12px; 
+border-spacing:0; 
+border-collapse:collapse;
+}
+/* from espn site css */
+/*.mod-inline.image {
+    color: #333;
+    font-size: 10px;
+}
+.mod-inline.image .enlarge {
+    color: #999;
+    font-size: 10px;
+    font-weight: normal;
+}
+.mod-inline.image .enlarge:hover {
+    text-decoration: none;
+}
+.mod-inline.image .enlarge img {
+    margin-top: 4px;
+}
+.mod-inline.image.image-right {
+    border-left: 1px solid #c2c2c2;
+    float: right;
+    margin: 0 0 10px 10px;
+    padding: 0 0 0 10px;
+}
+.mod-inline.image.image-left {
+    border-right: 1px solid #c2c2c2;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 0 10px 0 0;
+}
+.mod-inline.img-203 {
+    width: 203px;
+}*/
+

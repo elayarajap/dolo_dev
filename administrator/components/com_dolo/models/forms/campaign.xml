@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_DOLO_FORM_LBL_CAMPAIGN_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_CREATED_BY"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_CREATED_BY"  /> 
+
+       <field name="name" type="text" size="40" class="inputbox"
+                                                    
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_NAME"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_NAME" 
+                                                    
+                                                    
+                                                     required="true" 
+                                                    filter="safehtml" /> 
+
+       <field name="start_date" type="calendar" class="inputbox"
+         required="true" 
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_START_DATE"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_START_DATE" 
+        format="%Y-%m-%d %H:%M:%S"
+        filter="safehtml" /> 
+
+       <field name="end_date" type="calendar" class="inputbox"
+         required="true" 
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_END_DATE"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_END_DATE" 
+        format="%Y-%m-%d %H:%M:%S"
+        filter="safehtml" /> 
+
+ <field name="brandid" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_BRANDID"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_BRANDID" input_type="list" table="#__dolo_brand" key_field="id" value_field="name"  required="true"  /> 
+
+       <field name="filter_brandid" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select brandid -' AS `val` UNION SELECT `id`, `name` AS val FROM `#__dolo_brand`" key_field="id" value_field="val"
+             /> 
+
+ <field name="campaigntype_id" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_CAMPAIGNTYPE_ID"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_CAMPAIGNTYPE_ID" input_type="list" table="#__dolo_campaigntype" key_field="id" value_field="type"  required="true"  /> 
+
+ <field name="campaignstatus_id" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_CAMPAIGNSTATUS_ID"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_CAMPAIGNSTATUS_ID" input_type="list" table="#__dolo_campaignstatus" key_field="id" value_field="status"  required="true"  /> 
+
+       <field name="filter_campaignstatus_id" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select campaignstatus_id -' AS `val` UNION SELECT `id`, `status` AS val FROM `#__dolo_campaignstatus`" key_field="id" value_field="val"
+             /> 
+
+       <field name="impressions" type="text" size="40" class="inputbox"
+                                                    
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_IMPRESSIONS"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_IMPRESSIONS" 
+                                                    
+                                                    
+                                                    
+                                                    filter="safehtml" /> 
+
+ 
+		<field name="hero_images" type="tag" mode="ajax" label="Hero Images" description="" multiple="true" custom="allow" required="true" /> 
+
+       <field name="keywords" type="tag" mode="ajax" label="Keywords" description="" multiple="true" custom="allow"  />
+
+ <field name="collaborators" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_CAMPAIGN_COLLABORATORS"
+            description="COM_DOLO_FORM_DESC_CAMPAIGN_COLLABORATORS" input_type="list" table="#__users" key_field="id" value_field="name"  multiple="multiple"/> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field>
+
+	</fieldset>
+
+</form>

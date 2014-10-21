@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="JSEARCH_FILTER"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="brandid" type="sql" class="inputbox" onchange="this.form.submit();"
+                                    query="SELECT '' AS `id`, '- Please select brandid -' AS `name` UNION SELECT `id`, `name` FROM `#__dolo_brand`" key_field="id" value_field="name"/> 
+
+ <field name="campaignstatus_id" type="sql" class="inputbox" onchange="this.form.submit();"
+                                    query="SELECT '' AS `id`, '- Please select campaignstatus_id -' AS `status` UNION SELECT `id`, `status` FROM `#__dolo_campaignstatus`" key_field="id" value_field="status"/>
+
+    </fields>
+</form>

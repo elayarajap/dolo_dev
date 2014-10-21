@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+        <name>Page Style Menu Params</name>
+        <author>AAAtheme</author>
+        <creationDate>June 2014</creationDate>
+        <copyright>Copyright (C) 2014 AAAtheme. All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+        <authorEmail>contact@aaatheme.com</authorEmail>
+        <authorUrl>http://aaatheme.com</authorUrl>
+        <version>1.0.0</version>
+        <description><![CDATA[
+				AAAtheme Menu Page Style Params. Info and Support: <a href="mailto:contact@aaatheme.com">contact@aaatheme.com</a> - <a href="index.php?option=com_plugins">Go to Plugin Manager</a> 
+			]]></description>
+        <files>
+                <file plugin="pagestylemenu">pagestylemenu.php</file>
+                <folder>params</folder>
+        </files>
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_pagestylemenu.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_pagestylemenu.sys.ini</language>
+		</languages>
+</extension>

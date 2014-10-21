@@ -1,0 +1,176 @@
+
+.sortable {width:1170px; border-left:1px solid #c6d5e1; border-top:1px solid #c6d5e1; border-bottom:1px; margin:0 auto 15px;}
+.sortable th {background-color: #8D8A8A; text-align:left; color:#cfdce7; border:1px solid #c6d5e1; border-right:none;}
+.sortable th h3 {font-size:11px;}
+.sortable td {padding:4px 6px 6px; border-bottom:1px solid #fff; border-right:1px solid #c6d5e1}
+.sortable .head h3 {background:url(../images/sort.gif) 7px center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .desc, .sortable .asc {background-color: #222;}
+.sortable .desc h3 {background:url(../images/desc.gif) 7px center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .asc h3 {background:url(../images/asc.gif) 7px  center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .head:hover, .sortable .desc:hover, .sortable .asc:hover th h3 {color:#fff;}
+.sortable .evenrow td {background:#fff}
+.sortable .oddrow td {background:#ecf2f6}
+.sortable td.evenselected {background:#ecf2f6}
+.sortable td.oddselected {background:#dce6ee}
+
+#controls {width:1170px; margin:10px auto; height:50px}
+#perpage {float:left; width:200px;padding-top:16px}
+#perpage select {width:60px; float:left; font-size:11px}
+#perpage span {float:left; margin:2px 0 0 5px}
+#navigation {float:left; width:570px; text-align:center}
+#navigation img {cursor:pointer}
+#text {float:right; width:200px; text-align:right; margin-top:2px}
+
+
+.tpheader{
+ border:thin;
+ border-color:#666666;
+ background:#8D8A8A;
+ padding-top:15px;
+ border-radius:5px;
+ height:10%;
+ width:1170px;
+ margin-bottom: 2%;
+}
+
+.imagesInline {
+    display: inline;
+}
+
+ .edt
+  {
+    background:#ffffff; 
+    border:3px double #aaaaaa; 
+    -moz-border-left-colors:  #aaaaaa #ffffff #aaaaaa; 
+    -moz-border-right-colors: #aaaaaa #ffffff #aaaaaa; 
+    -moz-border-top-colors:   #aaaaaa #ffffff #aaaaaa; 
+    -moz-border-bottom-colors:#aaaaaa #ffffff #aaaaaa; 
+    width: 300px;
+  }
+ 
+ .tpheader #getUserImage
+  {
+    background: url("../images/mshah_add-user.png") no-repeat;
+    width:  32px;
+    height: 40px;
+    cursor:pointer;
+    border: none;
+  }
+
+ .tpheader #getBlockImage
+    {
+        background: url("../images/mshah_block.png") no-repeat;
+        width:  32px;
+        height: 40px;
+        cursor:pointer;
+        border: none;
+    }
+ .tpheader #getUnblockImage
+    {
+        background: url("../images/mshah_unblock.png") no-repeat;
+        width:  32px;
+        height: 40px;
+        cursor:pointer;
+        border: none;
+    }
+ .tpheader #getDeleteImage
+    {
+        background: url("../images/mshah_delete-user.png") no-repeat;
+        width:  32px;
+        height: 40px;
+        cursor:pointer;
+        border: none;
+    }
+
+ .tpheader #getUserActiveImage
+    {
+        background: url("../images/mshah_active.png") no-repeat;
+        width:  32px;
+        height: 40px;
+        cursor:pointer;
+        border: none;
+        padding-top: 26px;
+    }
+    
+ .tpheader #getUserInactiveImage
+    {
+        background: url("../images/mshah_inactive.png") no-repeat;
+        width:  32px;
+        height: 40px;
+        cursor:pointer;
+        border: none;
+        padding-top: 26px;
+   }
+
+ .tpheader #getPdfImage
+  {
+    background: url("../images/mshah_pdf.png") no-repeat;
+    width:  32px;
+    height: 40px;
+    cursor:pointer;
+    border: none;
+  }  
+
+ .tpheader #getCsvImage
+  {
+    background: url("../images/mshah_csv.png") no-repeat;
+    width:  32px;
+    height: 40px;
+    cursor:pointer;
+    border: none;
+  } 
+  .searchTerm2
+{
+    background: #e1e1e1; /* Fallback color for non-css3 browsers */
+    width: 150px;
+    vertical-align: top;
+    height: 20px;
+    float: right;
+    margin-top: 40px;
+    margin-right: 40px;
+
+    /* Gradients */
+    background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+    background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+
+    /* Rounded Corners */
+    border-radius: 2px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+
+    /* Shadows */
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+.searchTerm1
+{
+    background: #e1e1e1; /* Fallback color for non-css3 browsers */
+    width: 150px;
+    vertical-align: top;
+    height: 20px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+
+    /* Gradients */
+    background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+    background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+
+    /* Rounded Corners */
+    border-radius: 2px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+
+    /* Shadows */
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+ #horizontalscrollbar {  }
+ #horizontalscrollbar th h3{color: #FFF;}
+ #horizontalscrollbar p { margin: 0; padding: 1em; white-space: nowrap; }
+
+ 

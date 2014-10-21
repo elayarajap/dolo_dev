@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" client="site" method="upgrade">
+	<name>Dolo Dashboard</name>
+	<author>Tarz</author>
+	<creationDate>08/11/14</creationDate>
+	<copyright>Pandoodle Corp</copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.1</version>
+	<description>Dolo Dashboard Component</description>
+	<files>
+		<filename component="com_dolodashboard">dolodashboard.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<folder>views/</folder>
+	</files>
+	<administration>
+		<menu link="option=com_dolodashboard">Dolo Dashboard</menu>
+	    <files>
+	    	<filename component="com_dolodashboard">dolodashboard.php</filename>
+	    </files>
+	</administration>
+</extension>

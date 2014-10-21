@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_DOLO_FORM_LBL_USERBRANDMAPPING_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_DOLO_FORM_LBL_USERBRANDMAPPING_CREATED_BY"
+            description="COM_DOLO_FORM_DESC_USERBRANDMAPPING_CREATED_BY"  /> 
+
+ <field name="user_id" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_USERBRANDMAPPING_USER_ID"
+            description="COM_DOLO_FORM_DESC_USERBRANDMAPPING_USER_ID" input_type="list" table="#__users" key_field="id" value_field="name"  required="true"  /> 
+
+       <field name="filter_user_id" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select user_id -' AS `val` UNION SELECT `id`, `name` AS val FROM `#__users`" key_field="id" value_field="val"
+             /> 
+
+ <field name="brand_id" type="foreignkey" class="inputbox"
+            label="COM_DOLO_FORM_LBL_USERBRANDMAPPING_BRAND_ID"
+            description="COM_DOLO_FORM_DESC_USERBRANDMAPPING_BRAND_ID" input_type="list" table="#__dolo_brand" key_field="id" value_field="name"  required="true"  /> 
+
+       <field name="filter_brand_id" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select brand_id -' AS `val` UNION SELECT `id`, `name` AS val FROM `#__dolo_brand`" key_field="id" value_field="val"
+             /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field>
+
+	</fieldset>
+
+</form>

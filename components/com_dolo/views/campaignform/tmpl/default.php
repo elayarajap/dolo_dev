@@ -64,6 +64,14 @@ $result_brand_edit=mysql_query("SELECT brandid from ".$jconfig->dbprefix."dolo_c
 $brandList = mysql_fetch_array($result_brand_edit); 
 $brand_selected = $brandList[0];
 //Campaigns brands ends here
+
+//Campaigns hero images for tabular view
+$hero_images=mysql_query("SELECT hero_images from ".$jconfig->dbprefix."dolo_campaign WHERE id=".$this->item->id."");
+$hero_images_list = mysql_fetch_array($hero_images); 
+$hero_images_list_result = $hero_images_list["hero_images"];
+$result_hero=mysql_query("SELECT * from ".$jconfig->dbprefix."tags a WHERE a.id IN (".$hero_images_list_result.")");
+//Campaigns hero images for tabular view ends here
+
 }
 
 else if(!$isAdmin) {
@@ -76,10 +84,31 @@ $brandList = mysql_fetch_array($result_brand_edit);
 $brand_selected = $brandList[0];
 //Campaigns brands ends here
 }
+
+else if($isAdmin){
+
+//Campaigns hero images for tabular view
+$hero_images=mysql_query("SELECT hero_images from ".$jconfig->dbprefix."dolo_campaign WHERE id=".$this->item->id."");
+$hero_images_list = mysql_fetch_array($hero_images); 
+$hero_images_list_result = $hero_images_list["hero_images"];
+$result_hero=mysql_query("SELECT * from ".$jconfig->dbprefix."tags a WHERE a.id IN (".$hero_images_list_result.")");
+//Campaigns hero images for tabular view ends here
+
+}
 // Joomla custom scripting ends here
 
+$jRootPath = JPath::clean(JPATH_ROOT);
+$upload_path = $jRootPath . '/images/';
 
 ?>
+<style>
+.imageresize{
+	display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
 </style>
 <script type="text/javascript">
     getScript('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function() {
@@ -251,6 +280,36 @@ $brand_selected = $brandList[0];
 		<input type="hidden" name="jform[state]" value="<?php echo $this->item->state; ?>" />
 
 <br/>
+
+<table class="table table-striped">
+	
+	<tr>
+		<th>Thumbnail</th>
+		<th>Hero Images URL</th>
+		<th>Created On</th>
+		<th>Tray Status</th>
+	</tr>
+
+	<?php while($result_hero_lists = mysql_fetch_array($result_hero)) { ?>
+	
+	<?php 
+
+	$pathname = $result_hero_lists["title"]; 
+	$created_time = $result_hero_lists["created_time"];
+
+	?>
+
+	<tr>
+		<td><a href="<?php echo $pathname; ?>"><img src="<?php echo $pathname; ?>" class="imageresize" /></a></td>
+		<td><a href="<?php echo $pathname; ?>"><?php echo $pathname; ?></a></td>
+		<th><?php echo $created_time; ?></th>
+		<td><a href="javascript:void(0)">Editor</a></td>
+	</tr>
+
+	<?php } ?>
+
+</table>
+
 	<?php foreach((array)$this->item->collaborators as $value): ?>
 		<?php if(!is_array($value)): ?>
 			<input type="hidden" class="collaborators" name="jform[collaboratorshidden][<?php echo $value; ?>]" value="<?php echo $value; ?>" />

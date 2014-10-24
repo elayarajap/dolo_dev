@@ -7,6 +7,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 $app = JFactory::getApplication();
 
 
+include_once JPATH_SITE.'/test.php';
+
+
 $admin = $app->isAdmin();
 
 if($admin==1)

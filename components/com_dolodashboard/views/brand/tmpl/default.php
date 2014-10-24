@@ -3,6 +3,8 @@
 **/
 // no direct access
 defined('_JEXEC') or die;
+
+
 ?>
 <!-- Dolo Dashboard Company starts here -->
 <div class="doloDashboard<?php echo $this->pageclass_sfx; ?>">
